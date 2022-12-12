@@ -1,0 +1,39 @@
+---
+import Dark from "./Dark.astro";
+import FooterList from "./FooterList.astro";
+import IconLink from "./IconLink.astro";
+import { Icon } from 'astro-icon';
+
+
+---
+
+<footer>
+    <Dark>
+        <div class="grid grid-cols-1 lg:grid-cols-8 px-6 lg:px-28 gap-8 lg:gap-0  text-main-white">
+            <div class="lg:col-start-1 lg:col-span-2">
+                <FooterList link="#" text="Home" iconPack="ph" iconName="arrow-right" />
+                <FooterList link="#" text="About" iconPack="ph" iconName="arrow-right" />
+                <FooterList link="#" text="Portfolio" iconPack="ph" iconName="arrow-right" />
+                <FooterList link="#" text="FAQ" iconPack="ph" iconName="arrow-right" />
+            </div>
+            <div class="lg:col-start-3 lg:col-span-2">
+                <FooterList link="#" text="How it works" iconPack="ph" iconName="arrow-right" />
+                <FooterList link="#" text="What's included" iconPack="ph" iconName="arrow-right" />
+                <FooterList link="#" text="Let's get started" iconPack="ph" iconName="arrow-right" />
+            </div>
+            <div class="lg:col-start-5 lg:col-span-2">
+                <IconLink link="#" text="email@email.com" iconPack="ri" iconName="send-plane-fill" />
+                <IconLink link="#" text="123-456-7890" iconPack="ic" iconName="round-phone" />
+            </div>
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-2 px-6 lg:px-28 gap-2 mt-6 text-main-white items-center ">
+            <div class="p-8">
+                <p>2022 Limitless Web. All rights reserved</p>
+            </div>
+            <div class="p-8 lg:justify-self-end">
+                <Icon name="white-logo" class="w-52" />
+            </div>
+        </div>
+        
+    </Dark>
+</footer>

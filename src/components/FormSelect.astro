@@ -1,0 +1,19 @@
+---
+export interface props {
+    id: string;
+}
+
+const { id } = Astro.props;
+---
+
+<select id={id} class="w-full bg-bg-light border-x-0 border-t-0 border-b border-main-white text-lg font-bold p-4 focus:ring-0 focus:border-main-white">
+    <slot />
+
+</select>
+
+<style>
+    select{
+        background-image: url(../src/images/chevron-down-white.svg);
+    }
+
+</style>

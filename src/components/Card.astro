@@ -1,0 +1,21 @@
+---
+import Icon from 'astro-icon';
+
+export interface Props {
+	title: string;
+	body: string;
+	icon: string
+	family: string
+
+}
+
+const { icon, family, title, body } = Astro.props;
+---
+
+<div class="p-8 grid gap-2 bg-card-grad shadow-3d-shadow rounded-lg text-main-white">
+
+		<Icon pack={family} name={icon} class="w-6"  />	
+
+	<h4 class="text-3xl font-heading">{title}</h4>
+	<p class="text-lg font-main">{body}</p>
+</div>

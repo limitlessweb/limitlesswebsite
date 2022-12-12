@@ -1,0 +1,17 @@
+---
+import { Icon } from 'astro-icon';
+export interface props {
+    family: string;
+    icon1: string;
+    icon2: string;
+}
+
+const { family, icon1, icon2 } = Astro.props;
+---
+
+<div class="justify-items-center">
+    <Icon pack={family} name={icon1} class="w-8" />
+</div>
+<div>
+    <Icon pack={family} name={icon2} class="w-8" />
+</div>

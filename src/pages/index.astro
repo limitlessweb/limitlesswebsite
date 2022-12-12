@@ -1,0 +1,193 @@
+---
+import Section from '../components/Section.astro';
+import Comparison from '../components/Comparison.astro';
+import CheckX from '../components/CheckX.astro';
+import Layout from '../layouts/Layout.astro';
+import Button from '../components/Button.astro';
+import Card from '../components/Card.astro';
+import Light from '../components/Light.astro';
+import Dark from '../components/Dark.astro';
+import MainContact from '../components/MainContact.astro';
+import Footer from '../components/Footer.astro';
+import { Icon } from 'astro-icon';
+import { Image, Picture } from '@astrojs/image/components';
+import thumbsUp from '../images/thumbs-up-one.png';
+---
+
+<Layout title="Home">
+	<section id="hero" class="grid grid-cols-1 grid-flow-row lg:grid-cols-3 items-center mx-auto px-6 lg:pr-0 lg:pl-28 py-16 space-y-0 lg:space-y-0 content-center bg-bg-light bg-cover h-screen bg-hero-bg pt-32 gap-8">
+		<div class="lg:order-last col-span-2">
+			<img src="../src/images/wr-macbook@2x.png" class="" alt="">
+		</div>
+		<div class="mb-16 lg:mb-0">
+			<h1 class="text-main-white text-5xl font-heading">This is a heading with pricing information</h1>
+			<p class="text-main-white text-lg font-main font-light pt-4 pb-8">
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massa odio feugiat dictumst suspendisse blandit non. 
+			</p>
+			<a href="#" class="text-sm py-4 px-8 bg-main-pink rounded-lg text-main-white font-semibold">I'm already convinced</a>
+		</div>
+	</section>
+	<Dark>
+		<div class="grid grid-cols-1 lg:grid-cols-2 items-center gap-12">
+			<div class="bg-[url('../src/images/dot-pattern-horizontal.png')] bg-no-repeat bg-contain bg-left mr-16">
+				<img src="../src/images/Saly-38.png" alt="">
+			</div>
+			<div class="grid grid-cols-1 items-center px-6 lg:px-28 gap-4 text-main-white">
+				<h4 class="text-2xl  font-heading">So refreshing</h4>
+				<h2 class="text-4xl font-heading">Get a website refresh every 2 years (for free)</h2>
+				<hr class="my-8 w-32 h-0.5 bg-main-white rounded border-0">
+				<p class="font-main text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent quam senectus suspendisse donec donec volutpat blandit enim nulla. Ut eu eget semper dignissim sodales sem. Aliquam pellentesque vivamus integer placerat tempus et mi adipiscing.</p>
+				<Button title={"Wait, seriously?"} href={'#'}/>
+			</div>
+			
+		</div>
+	</Dark>
+	<Light>
+		<div class="grid grid-cols-1 md:grid-cols-3 gap-10 px-6 lg:px-28 py-28">
+			<Card family="ph" icon="lock-simple-bold" title="Hosting &amp; SSL" body="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent quam senectus suspendisse donec donec volutpat blandit enim nulla. Ut eu eget semper dignissim sodales sem. Aliquam pellentesque vivamus integer placerat tempus et mi adipiscing. " />
+			<Card family="ph" icon="lock-simple-bold" title="Hosting &amp; SSL" body="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent quam senectus suspendisse donec donec volutpat blandit enim nulla. Ut eu eget semper dignissim sodales sem. Aliquam pellentesque vivamus integer placerat tempus et mi adipiscing. " />
+			<Card family="ph" icon="lock-simple-bold" title="Hosting &amp; SSL" body="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent quam senectus suspendisse donec donec volutpat blandit enim nulla. Ut eu eget semper dignissim sodales sem. Aliquam pellentesque vivamus integer placerat tempus et mi adipiscing. " />
+			<Card family="ph" icon="lock-simple-bold" title="Hosting &amp; SSL" body="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent quam senectus suspendisse donec donec volutpat blandit enim nulla. Ut eu eget semper dignissim sodales sem. Aliquam pellentesque vivamus integer placerat tempus et mi adipiscing. " />
+			<Card family="ph" icon="lock-simple-bold" title="Hosting &amp; SSL" body="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent quam senectus suspendisse donec donec volutpat blandit enim nulla. Ut eu eget semper dignissim sodales sem. Aliquam pellentesque vivamus integer placerat tempus et mi adipiscing. " />
+			<Card family="ph" icon="lock-simple-bold" title="Hosting &amp; SSL" body="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent quam senectus suspendisse donec donec volutpat blandit enim nulla. Ut eu eget semper dignissim sodales sem. Aliquam pellentesque vivamus integer placerat tempus et mi adipiscing. " />
+		</div>
+	</Light>
+	<Dark>
+		<div class="grid grid-cols-1 lg:grid-cols-2 items-center gap-12">
+			<div class="grid grid-cols-1 items-center px-6 lg:px-28 gap-4 text-main-white order-last lg:order-first">
+				<h4 class="text-2xl  font-heading">So refreshing</h4>
+				<h2 class="text-4xl font-heading">Get a website refresh every 2 years (for free)</h2>
+				<hr class="my-8 w-32 h-0.5 bg-main-white rounded border-0">
+				<p class="font-main text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent quam senectus suspendisse donec donec volutpat blandit enim nulla. Ut eu eget semper dignissim sodales sem. Aliquam pellentesque vivamus integer placerat tempus et mi adipiscing.</p>
+				<Button title={"Wait, seriously?"} href={'#'}/>
+			</div>
+			<div class="bg-[url('../src/images/dot-pattern-horizontal.png')] bg-no-repeat bg-contain bg-right ml-16 pr-6 lg:pr-28">
+				<lottie-player src="https://assets10.lottiefiles.com/packages/lf20_7fy2yzzs.json"  background="transparent"  speed="1"  style="width: 100%; height: 100%;"  loop  autoplay></lottie-player>
+			</div>
+		</div>
+	</Dark>
+	<Light>
+		<div class="grid grid-cols-1 lg:grid-cols-2 items-center gap-12 py-28">
+			<div class="grid grid-cols-1 items-center px-6 lg:px-28 gap-4 text-main-white order-last lg:order-first">
+				<h4 class="text-2xl font-heading">About us</h4>
+				<h2 class="text-4xl font-heading">We're innovators</h2>
+				<hr class="my-8 w-32 h-0.5 bg-main-white rounded border-0">
+				<p class="font-main text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent quam senectus suspendisse donec donec volutpat blandit enim nulla. Ut eu eget semper dignissim sodales sem. Aliquam pellentesque vivamus integer placerat tempus et mi adipiscing.</p>
+				<Button title={"About us"} href={"#"} />
+			</div>
+			<div class="grid mx-auto bg-[url('../src/images/dot-pattern-horizontal.png')] bg-no-repeat bg-contain bg-right ml-16 px-6 lg:px-28">
+				<div class="grid grid-cols-5 grid-rows-4">
+					<div class="col-start-1 col-span-3 row-start-3 row-span-2 self-center relative">
+						<img src="../src/images/tristan-placeholder.jpg" alt="">
+					</div>
+					<div class="row-start-1 row-end-4 col-span-3 col-end-6 self-center">
+						<img src="../src/images/dad-placeholder.jpg" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+	</Light>
+	<Dark>
+		<div class="grid grid-cols-1 lg:grid-cols-2 grid-rows-4 items-center gap-12 bg-[url('../src/images/dot-pattern-vertical-mobile.png')] lg:bg-[url('../src/images/dot-pattern-vertical.png')] bg-no-repeat bg-auto bg-right px-6 lg:px-28">
+			<div class="grid grid-cols-1 items-center gap-4 text-main-white">
+				<h4 class="text-2xl font-heading">Portfolio</h4>
+				<h2 class="text-4xl font-heading">Recent work</h2>
+				<hr class="my-8 w-32 h-0.5 bg-main-white rounded border-0">
+				<p class="font-main text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent quam senectus suspendisse donec donec volutpat blandit enim nulla. Ut eu eget semper dignissim sodales sem. Aliquam pellentesque vivamus integer placerat tempus et mi adipiscing.</p>
+			</div>
+			<div class="grid grid-cols-1 gap-1 text-main-white">
+				<img src="../src/images/tristan-placeholder.jpg" alt="">
+				<p class="font-main text-lg font-bold uppercase">Whisker Rescue</p>
+				<p class="font-main text-sm font-thin">Stray cat rescue in Red Deer, AB</p>
+			</div>
+			<div class="grid grid-cols-1 gap-1 text-main-white">
+				<img src="../src/images/tristan-placeholder.jpg" alt="">
+				<p class="font-main text-lg font-bold uppercase">Whisker Rescue</p>
+				<p class="font-main text-sm font-thin">Stray cat rescue in Red Deer, AB</p>
+			</div>
+			<div class="grid lg:row-start-3 lg:row-end-4 lg:col-start-2 lg:col-end-3 grid-cols-1 gap-1 text-main-white">
+				<img src="../src/images/tristan-placeholder.jpg" alt="">
+				<p class="font-main text-lg font-bold uppercase">Whisker Rescue</p>
+				<p class="font-main text-sm font-thin">Stray cat rescue in Red Deer, AB</p>
+			</div>
+			<div class="grid lg:row-start-4 grid-cols-1 gap-1 text-main-white">
+				<h2 class="text-4xl font-heading">Like what you see?</h2>
+				<hr class="my-8 w-32 h-0.5 bg-main-white rounded border-0">
+				<p class="font-main text-lg">
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+				</p>
+				<Button title={"Show me more"} href={"#"} />
+			</div>
+		</div>
+	</Dark>
+	<Light>
+		<div class="grid grid-cols-1 items-center gap-12 bg-[url('../src/images/dot-pattern-horizontal-cropped-mobile.png')] lg:bg-[url('../src/images/dot-pattern-horizontal-cropped.png')] bg-auto bg-no-repeat bg-top py-28 px-6 lg:px-28">
+			<div class="text-center text-main-white">
+				<h4 class="text-2xl font-heading">
+				Page builders not included
+				</h4>
+				<h2 class="text-4xl font-heading">No templates. Ever!</h2>
+				<hr class="my-8 mx-auto w-32 h-0.5 bg-main-white rounded border-0">
+				<p class="font-main text-xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent quam senectus suspendisse donec donec volutpat blandit enim nulla. Ut eu eget semper dignissim sodales sem. Aliquam pellentesque vivamus integer placerat tempus et mi adipiscing.</p>
+			</div>
+			<div class="grid grid-cols-1 gap-12 lg:grid-cols-5 text-main-white items-center place-items-center">
+				<Icon pack="ph" name="figma-logo" class="w-24" />
+				<Icon pack="teenyicons" name="html5-outline" class="w-24" />
+				<Icon pack="simple-icons" name="tailwindcss" class="w-24" />
+				<Icon pack="simple-icons" name="astro" class="w-24" />
+				<Icon pack="simple-icons" name="netlify" class="w-24" />
+			</div>
+		</div>
+	</Light>
+	<Dark>
+		<div class="grid grid-cols-1 lg:grid-cols-2 items-center">
+			<div class="pl-6 lg:pl-28 text-main-white">
+				<h4 class="text-2xl font-heading">Websites as a service</h4>
+				<h2 class="text-4xl font-heading">Pay monthly websites are the way forward</h2>
+				<h4 class="my-8 w-32 h-0.5 bg-main-white rounded border-0"></h4>
+				<p class="font-main text-xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent quam senectus suspendisse donec donec volutpat blandit enim nulla. Ut eu eget semper dignissim sodales sem. Aliquam pellentesque vivamus integer placerat tempus et mi adipiscing. </p>
+			</div>
+			<div class="place-self-end">
+				<Picture src={thumbsUp} widths={[400, 800, 1200]} sizes="(max-width: 800px) 100vs, 800px" alt="" />
+			</div>
+
+		</div>
+
+			<div class="grid grid-cols-4 pr-6 lg:pr-28 text-main-white">
+				<div class="col-start-3 text-right">
+					<p>Limitless</p>
+				</div>
+				<div class="col-start-4 text-right">
+					<p>Traditional</p>
+				</div>
+			</div>
+			<Comparison text="Spend thousands upfront">
+				<CheckX family="ic" icon1="round-close" icon2="round-check" />	
+			</Comparison>				
+			<Comparison text="Hidden fees">
+				<CheckX family="ic" icon1="round-close" icon2="round-check" />	
+			</Comparison>
+			<Comparison text="Free monthly updates">
+				<CheckX family="ic" icon1="round-check" icon2="round-close" />	
+			</Comparison>
+			<Comparison text="Monthly support when you need it">
+				<CheckX family="ic" icon1="round-check" icon2="round-close" />	
+			</Comparison>
+			<Comparison text="Website refresh every two years">
+				<CheckX family="ic" icon1="round-check" icon2="round-close" />	
+			</Comparison>
+	</Dark>
+	<Light>
+		<div class="text-main-white text-center pt-28 pb-6 px-6 lg:px-28 mt-8 lg:mt-0">
+			<h4 class="text-2xl font-heading">
+				Ready to get started?
+				</h4>
+				<h2 class="text-4xl font-heading">Let's do this!</h2>
+				<hr class="my-8 mx-auto w-32 h-0.5 bg-main-white rounded border-0">
+				<p class="font-main text-xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent quam senectus suspendisse donec donec volutpat blandit enim nulla. Ut eu eget semper dignissim sodales sem. Aliquam pellentesque vivamus integer placerat tempus et mi adipiscing.</p>
+		</div>
+		<MainContact />
+	</Light>
+	<Section id="new-section" />
+	<Footer />
+</Layout>

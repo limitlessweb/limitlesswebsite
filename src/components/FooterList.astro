@@ -1,0 +1,15 @@
+---
+import { Icon } from 'astro-icon';
+export interface props {
+    link: string;
+    text: string;
+    iconPack: string;
+    iconName: string;
+}
+
+const { link, text, iconPack, iconName } = Astro.props;
+---
+
+<ul>
+    <li class="py-4"><a href={link} class="font-heading text-lg p-8 underline">{text}<Icon pack={iconPack} name={iconName} class="w-6 inline ml-2" /></a></li>
+</ul>

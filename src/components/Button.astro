@@ -1,0 +1,13 @@
+---
+import { Icon } from 'astro-icon';
+export interface props {
+    title: string;
+    href: string;
+}
+
+const { href, title, } = Astro.props;
+---
+
+<div class="flex font-main text-lg mt-4 uppercase">
+    <a href={href} class="flex gap-3 text-sm py-4 px-8 bg-main-pink rounded-lg text-main-white font-semibold justify-center items-center">{title} <Icon pack="ph" name="arrow-right" class="w-6" /></a>
+</div>

@@ -1,0 +1,13 @@
+---
+export interface props {
+    formType: string;
+    formId: string
+
+}
+
+const { formType, formId} = Astro.props;
+---
+
+<input type={formType} id={formId} class="w-full bg-bg-light border-x-0 border-t-0 border-b border-main-white text-lg font-bold p-4 focus:ring-0 focus:border-main-white">
+
+<!-- need to set up boolean for required field -->

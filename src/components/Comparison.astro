@@ -1,0 +1,15 @@
+---
+
+export interface props {
+    text: string;
+}
+
+const { text } = Astro.props;
+---
+
+<div class="grid grid-cols-4 mx-6 lg:mx-28 justify-items-end py-8 gap-8 border-b border-main-white text-main-white">
+    <div class="col-span-2 justify-self-start">
+        <p>{text}</p>
+    </div>
+    <slot />
+</div>

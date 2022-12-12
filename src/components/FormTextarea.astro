@@ -1,0 +1,13 @@
+---
+export interface props {
+    formName: string;
+    formId: string;
+    formCols: string;
+    formRows: string;
+
+}
+
+const { formName, formId, formCols, formRows } = Astro.props;
+---
+
+<textarea name={formName} id={formId} cols={formCols} rows={formRows} class="w-full bg-bg-light border-x-0 border-t-0 border-b border-main-white text-lg font-bold p-4 focus:ring-0 focus:border-main-white"></textarea>

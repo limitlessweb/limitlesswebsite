@@ -1,0 +1,15 @@
+---
+export interface props  {
+    sectionID: string;
+    invert?:boolean;
+    dotPatternVertical?:boolean;
+}
+
+const { sectionID, invert = false, dotPatternVertical = false } = Astro.props;
+---
+
+<section id={sectionID} class:list={["grid grid-cols-1 lg:grid-cols-2 items-center pr-6 lg:pr-28 py-16 content-center gap-8", { "bg-bg-dark": !invert, "bg-bg-light": invert} ]}>
+    <div class="bg-[url('../src/images/dot-pattern-horizontal.png')] bg-no-repeat bg-contain bg-left pl-6 lg:pl-28">
+        <slot />
+    </div>
+</section>

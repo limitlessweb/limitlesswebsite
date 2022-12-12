@@ -1,0 +1,152 @@
+---
+import logo from '../images/white-color-logo.svg';
+import hamburger from '../images/hamburger.svg';
+
+---
+<style>
+    #primary-navigation[data-visible="true"]{
+        transform: translateX(0%);
+    }
+    
+    #mobile-nav-toggle[aria-expanded="true"]{
+        background-image: url("../src/images/close-icon.svg");
+        position: fixed;
+    }
+
+    #website-dropdown:hover #website-dropdown-content{
+        display: block;
+    }
+</style>
+<nav class="absolute flex flex-row inset-x-0 top-0 py-8 px-6 lg:px-28 justify-between items-center">
+    <!-- limitless logo -->
+    <div class="flex items-center flex-shrink-0 text-main-white mr-6">
+        <svg width="170" height="46" viewBox="0 0 170 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M73.7424 34.9145C73.9453 34.9145 74.1482 34.8275 74.3221 34.6826C74.4671 34.5087 74.554 34.3058 74.554 34.1029V32.7406C74.554 32.5377 74.4671 32.3348 74.3221 32.1609C74.1482 32.016 73.9453 31.929 73.7424 31.929H66.844C66.4092 31.929 66.0324 31.5522 66.0324 31.1175V16.3931C66.0324 15.9583 65.6556 15.5815 65.2208 15.5815H63.4528C63.018 15.5815 62.6412 15.9583 62.6412 16.3931V34.1029C62.6412 34.5377 63.018 34.9145 63.4528 34.9145H73.7424Z" fill="#F5F5F3"/>
+        <path d="M79.4797 34.9144C79.9145 34.9144 80.2913 34.5376 80.2913 34.1028V21.7262C80.2913 21.2914 79.9145 20.9146 79.4797 20.9146H78.0594C77.6247 20.9146 77.2479 21.2914 77.2479 21.7262V34.1028C77.2479 34.5376 77.6247 34.9144 78.0594 34.9144H79.4797Z" fill="#F5F5F3"/>
+        <path d="M103.334 34.9143C103.769 34.9143 104.146 34.5375 104.146 34.1028V24.7986C104.146 21.958 102.697 20.5667 100.117 20.5667C98.0302 20.5667 96.1751 21.8711 95.3636 23.1464C94.8998 21.6102 93.6245 20.5667 91.5375 20.5667C90.1752 20.5667 88.9289 21.1464 88.0303 21.7841C87.8274 21.929 87.5666 21.958 87.3637 21.8421C87.1318 21.7261 86.9869 21.4943 86.9869 21.2624C86.9869 21.1754 86.9579 21.0885 86.8709 21.0305C86.813 20.9435 86.726 20.9146 86.6391 20.9146H84.755C84.3203 20.9146 83.9435 21.2914 83.9435 21.7261V34.1028C83.9435 34.5375 84.3203 34.9143 84.755 34.9143H86.1753C86.6101 34.9143 86.9869 34.5375 86.9869 34.1028V25.4072C86.9869 25.2333 87.0448 25.0594 87.1608 24.9145C87.8274 24.0739 88.9868 23.2624 90.2042 23.2624C91.8564 23.2624 92.523 24.2768 92.523 25.784V34.1028C92.523 34.5375 92.8998 34.9143 93.3346 34.9143H94.7549C95.1896 34.9143 95.5665 34.5375 95.5665 34.1028V25.1174C96.1751 24.2189 97.4505 23.2624 98.8128 23.2624C100.436 23.2624 101.103 24.2768 101.103 25.784V34.1028C101.103 34.5375 101.479 34.9143 101.914 34.9143H103.334Z" fill="#F5F5F3"/>
+        <path d="M110.03 34.9144C110.465 34.9144 110.842 34.5376 110.842 34.1028V21.7262C110.842 21.2914 110.465 20.9146 110.03 20.9146H108.61C108.175 20.9146 107.798 21.2914 107.798 21.7262V34.1028C107.798 34.5376 108.175 34.9144 108.61 34.9144H110.03Z" fill="#F5F5F3"/>
+        <path d="M118.697 35.2622C119.711 35.2622 120.465 35.0593 120.986 34.7694C121.334 34.5955 121.508 34.1897 121.392 33.8129C121.305 33.581 121.218 33.2912 121.131 33.0013C121.015 32.5955 120.552 32.3347 120.117 32.4796C119.914 32.5376 119.711 32.5665 119.479 32.5665C118.61 32.5665 118.146 31.8709 118.146 30.9144V24.3928C118.146 23.958 118.523 23.5812 118.957 23.5812H120.175C120.61 23.5812 120.986 23.2044 120.986 22.7696V21.7261C120.986 21.2914 120.61 20.9146 120.175 20.9146H118.957C118.754 20.9146 118.552 20.8276 118.378 20.6827C118.233 20.5088 118.146 20.3059 118.146 20.103V17.9001C118.146 17.6972 118.059 17.4943 117.914 17.3204C117.74 17.1755 117.537 17.0885 117.334 17.0885H115.914C115.711 17.0885 115.508 17.1755 115.334 17.3204C115.189 17.4943 115.102 17.6972 115.102 17.9001V20.103C115.102 20.3059 115.015 20.5088 114.87 20.6827C114.697 20.8276 114.494 20.9146 114.291 20.9146H113.595C113.16 20.9146 112.784 21.2914 112.784 21.7261V22.7696C112.784 23.2044 113.16 23.5812 113.595 23.5812H114.291C114.726 23.5812 115.102 23.958 115.102 24.3928V31.668C115.102 33.9868 116.349 35.2622 118.697 35.2622Z" fill="#F5F5F3"/>
+        <path d="M125.682 34.9144C126.117 34.9144 126.494 34.5376 126.494 34.1028V16.3929C126.494 15.9582 126.117 15.5814 125.682 15.5814H124.262C123.827 15.5814 123.45 15.9582 123.45 16.3929V34.1028C123.45 34.5376 123.827 34.9144 124.262 34.9144H125.682Z" fill="#F5F5F3"/>
+        <path d="M129.276 27.9C129.276 32.3347 132.406 35.2622 136.609 35.2622C138.522 35.2622 140.319 34.7404 141.682 33.7549C142.029 33.4941 142.116 33.0013 141.856 32.6245C141.711 32.4216 141.566 32.1897 141.392 31.9579C141.16 31.5811 140.638 31.4941 140.261 31.755C139.305 32.4216 138.03 32.7694 136.928 32.7694C134.754 32.7694 133.305 31.61 132.725 30.0159C132.638 29.755 132.667 29.4941 132.812 29.2623C132.957 29.0594 133.218 28.9144 133.479 28.9144C135.653 28.9144 140.667 28.9144 142.551 28.9144C142.754 28.9144 142.928 28.8275 143.073 28.7115C143.189 28.5666 143.276 28.3927 143.276 28.1898C143.276 23.7841 140.58 20.5667 136.377 20.5667C132.233 20.5667 129.276 23.8421 129.276 27.9ZM136.377 23.0595C138.551 23.0595 139.711 24.3638 140.145 25.6971C140.232 25.958 140.174 26.2188 140.03 26.4217C139.856 26.6536 139.624 26.7695 139.363 26.7695C137.856 26.7695 134.957 26.7695 133.421 26.7695C133.16 26.7695 132.928 26.6536 132.754 26.4217C132.609 26.2188 132.58 25.929 132.667 25.6681C133.131 24.3058 134.319 23.0595 136.377 23.0595Z" fill="#F5F5F3"/>
+        <path d="M145.16 32.5086C144.928 32.8564 145.015 33.3202 145.334 33.581C146.754 34.6825 148.696 35.2622 150.783 35.2622C154.551 35.2622 156.609 33.3781 156.609 30.9144C156.609 27.6101 153.624 26.9145 151.189 26.3927C149.537 26.0159 148.145 25.6391 148.145 24.5667C148.145 23.5812 149.16 23.0015 150.754 23.0015C152.087 23.0015 153.334 23.4363 154.232 24.0739C154.406 24.2189 154.638 24.2478 154.87 24.2189C155.102 24.1609 155.276 24.016 155.392 23.8421C155.537 23.6102 155.681 23.3493 155.797 23.1464C156.029 22.7696 155.942 22.3058 155.594 22.074C154.377 21.1754 152.754 20.5667 150.725 20.5667C147.189 20.5667 145.218 22.5377 145.218 24.8275C145.218 27.9579 148.087 28.5956 150.493 29.1173C152.203 29.4941 153.681 29.9289 153.681 31.1463C153.681 32.1897 152.754 32.8564 150.928 32.8564C149.45 32.8564 147.913 32.2477 146.841 31.4651C146.667 31.3202 146.435 31.2912 146.203 31.3202C146 31.3492 145.798 31.4941 145.682 31.697C145.508 31.9579 145.305 32.2477 145.16 32.5086Z" fill="#F5F5F3"/>
+        <path d="M158.551 32.5086C158.319 32.8564 158.406 33.3202 158.725 33.581C160.145 34.6825 162.087 35.2622 164.174 35.2622C167.942 35.2622 170 33.3781 170 30.9144C170 27.6101 167.015 26.9145 164.58 26.3927C162.928 26.0159 161.536 25.6391 161.536 24.5667C161.536 23.5812 162.551 23.0015 164.145 23.0015C165.478 23.0015 166.725 23.4363 167.623 24.0739C167.797 24.2189 168.029 24.2478 168.261 24.2189C168.493 24.1609 168.667 24.016 168.783 23.8421C168.928 23.6102 169.073 23.3493 169.188 23.1464C169.42 22.7696 169.333 22.3058 168.986 22.074C167.768 21.1754 166.145 20.5667 164.116 20.5667C160.58 20.5667 158.609 22.5377 158.609 24.8275C158.609 27.9579 161.478 28.5956 163.884 29.1173C165.594 29.4941 167.073 29.9289 167.073 31.1463C167.073 32.1897 166.145 32.8564 164.319 32.8564C162.841 32.8564 161.305 32.2477 160.232 31.4651C160.058 31.3202 159.826 31.2912 159.594 31.3202C159.392 31.3492 159.189 31.4941 159.073 31.697C158.899 31.9579 158.696 32.2477 158.551 32.5086Z" fill="#F5F5F3"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M80.2917 16.3408C80.2917 15.9207 79.9512 15.5798 79.5317 15.5798H78.0119C77.5925 15.5798 77.2519 15.9207 77.2519 16.3408V17.8675C77.2519 18.2859 77.5925 18.6268 78.0119 18.6268H79.5317C79.9512 18.6268 80.2917 18.2859 80.2917 17.8675V16.3408Z" fill="#DE46EB"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M110.807 16.3408C110.807 15.9207 110.467 15.5798 110.047 15.5798H108.527C108.108 15.5798 107.767 15.9207 107.767 16.3408V17.8675C107.767 18.2859 108.108 18.6268 108.527 18.6268H110.047C110.467 18.6268 110.807 18.2859 110.807 17.8675V16.3408Z" fill="#47EBDD"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M24.4955 7.53543C24.4955 6.63118 25.229 5.89729 26.1336 5.89729C29.8344 5.89729 38.5213 5.89729 38.5213 5.89729C38.7387 5.89729 38.9462 5.81101 39.1002 5.65812C39.2541 5.50413 39.3404 5.29555 39.3404 5.07823C39.3404 3.84089 39.3404 1.63814 39.3404 1.63814C39.3404 1.20348 39.513 0.787401 39.8198 0.480523C40.1267 0.172553 40.5439 0 40.9785 0H44.2548C44.6895 0 45.1056 0.172553 45.4135 0.480523C45.7204 0.787401 45.893 1.20348 45.893 1.63814V4.91441C45.893 5.34906 45.7204 5.76624 45.4135 6.07312C45.1056 6.38 44.6895 6.55255 44.2548 6.55255H40.8147C40.5974 6.55255 40.3888 6.63882 40.2348 6.7928C40.0819 6.94679 39.9957 7.15429 39.9957 7.37162C39.9957 9.75238 39.9957 16.7046 39.9957 19.8979C39.9957 20.8022 40.7285 21.536 41.6338 21.536C44.3345 21.536 49.4292 21.536 49.4292 21.536C50.3334 21.536 51.0673 22.2699 51.0673 23.1742C51.0673 25.7286 51.0673 30.6299 51.0673 33.1832C51.0673 34.0885 50.3334 34.8213 49.4292 34.8213H41.6338C40.7285 34.8213 39.9957 35.5552 39.9957 36.4595C39.9957 39.668 39.9957 44.2854 39.9957 44.2854C39.9957 44.719 39.8231 45.1361 39.5162 45.443C39.2083 45.751 38.7922 45.9235 38.3575 45.9235H12.7095C12.2751 45.9235 11.8585 45.751 11.5513 45.443C11.2441 45.1361 11.0714 44.719 11.0714 44.2854V36.4595C11.0714 35.5552 10.338 34.8213 9.43327 34.8213C6.73187 34.8213 1.63814 34.8213 1.63814 34.8213C1.2037 34.8213 0.787068 34.6488 0.479863 34.3419C0.172658 34.035 0 33.6179 0 33.1832C0 28.0984 0 12.6213 0 7.53543C0 7.10078 0.172658 6.68469 0.479863 6.37782C0.787068 6.06985 1.2037 5.89729 1.63814 5.89729H9.43327C10.338 5.89729 11.0714 6.63118 11.0714 7.53543C11.0714 13.4262 11.0714 33.1832 11.0714 33.1832L11.0735 33.2651L11.0795 33.3459L11.0894 33.4256L11.1032 33.5043L11.1209 33.5829L11.1423 33.6604L11.1674 33.7358L11.1961 33.8101L11.2284 33.8832L11.2644 33.9553L11.3038 34.0241L11.3466 34.0929L11.3929 34.1584L11.4424 34.2218L11.4952 34.2829L11.5513 34.3419L11.6101 34.3976L11.6714 34.4511L11.735 34.5003L11.8007 34.5461L11.8685 34.5898L11.9382 34.6291L12.0096 34.6652L12.0827 34.6968L12.1573 34.7252L12.2332 34.7514L12.3103 34.7722L12.3885 34.7897L12.4676 34.8039L12.5477 34.8137L12.6283 34.8202L12.7095 34.8213C17.7946 34.8213 33.2722 34.8213 38.3575 34.8213C38.7922 34.8213 39.2083 34.6488 39.5162 34.3419C39.8231 34.035 39.9957 33.6179 39.9957 33.1832C39.9957 30.6026 39.9957 25.6172 39.9957 23.0355C39.9957 22.6008 39.8231 22.1847 39.5162 21.8779C39.2083 21.5699 38.7922 21.3973 38.3575 21.3973C38.3575 21.3973 29.802 21.3973 26.1336 21.3973C25.6992 21.3973 25.2825 21.2248 24.9753 20.9179C24.6681 20.611 24.4955 20.1939 24.4955 19.7592V7.53543Z" fill="url(#paint0_linear_623_3449)"/>
+        <defs>
+        <linearGradient id="paint0_linear_623_3449" x1="0" y1="24.0544" x2="51.0668" y2="24.0544" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#DE46EB"/>
+        <stop offset="0.39" stop-color="#CC5AE9"/>
+        <stop offset="0.71" stop-color="#89A3E3"/>
+        <stop offset="1" stop-color="#47EBDD"/>
+        </linearGradient>
+        </defs>
+        </svg>
+    </div>
+    
+    <button id="mobile-nav-toggle" class="block lg:hidden w-8 bg-contain bg-no-repeat aspect-square bg-hamburger top-8 right-6 z-50" aria-controls="primary-navigation" aria-expanded="false"><span class="sr-only">Menu</span>
+    </button>
+    <!-- main-navigation -->
+    <div id="primary-navigation" data-visible="false" class="fixed lg:static inset-y-0 right-0 pt-24 ml-24 lg:pt-0 px-6 lg:px-0 bg-bg-dark bg-opacity-40 backdrop-blur-sm lg:backdrop-blur-none lg:bg-opacity-0 z-40 translate-x-full lg:translate-x-0 transition-transform ease-out delay-100">
+        <!-- main-menu -->
+        <!-- main-menu-desktop -->
+        <div class="hidden lg:flex">
+            <ul class="flex gap-8 items-center">
+                <li>
+                    <button id="dropdownNavbarButton" data-dropdown-toggle="dropdownNavbar" class="flex justify-between items-center py-2 pr-4 pl-3 w-full font-medium text-main-white md:hover:bg-transparent md:border-0 lg:hover:text-main-pink lg:p-0 lg:w-auto">Websites <svg class="ml-1 w-4 h-4" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></button>
+                    <!-- Dropdown menu -->
+                    <div id="dropdownNavbar" class="hidden z-10 w-44 bg-bg-dark rounded divide-y divide-main-pink shadow">
+                        <ul class="py-1 text-sm text-main-white" aria-labelledby="dropdownNavbarButton">
+                            <li>
+                                <a href="#" class="block py-2 px-4 hover:bg-main-pink dark:hover:bg-gray-600 dark:hover:text-white">How it works</a>
+                            </li>
+                            <li>
+                                <a href="#" class="block py-2 px-4 hover:bg-main-pink dark:hover:bg-gray-600 dark:hover:text-white">What's included</a>
+                            </li>
+                            <li>
+                                <a href="#" class="block py-2 px-4 hover:bg-main-pink dark:hover:bg-gray-600 dark:hover:text-white">Portfolio</a>
+                            </li>
+                            <li>
+                                <a href="#" class="block py-2 px-4 hover:bg-main-pink dark:hover:bg-gray-600 dark:hover:text-white">Pricing</a>
+                            </li>
+                        </ul>
+
+            </div>
+                </li>
+                <li>
+                    <button id="dropdownNavbarButton" data-dropdown-toggle="dropdownNavbar2" class="flex justify-between items-center py-2 pr-4 pl-3 w-full font-medium text-main-white md:hover:bg-transparent md:border-0 lg:hover:text-main-pink lg:p-0 lg:w-auto">Company <svg class="ml-1 w-4 h-4" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></button>
+                    <!-- Dropdown menu -->
+                    <div id="dropdownNavbar2" class="hidden z-10 w-44 bg-bg-dark rounded divide-y divide-main-pink shadow">
+                        <ul class="py-1 text-sm text-main-white" aria-labelledby="dropdownNavbarButton">
+                            <li>
+                                <a href="#" class="block py-2 px-4 hover:bg-main-pink dark:hover:bg-gray-600 dark:hover:text-white">About us</a>
+                            </li>
+                            <li>
+                                <a href="#" class="block py-2 px-4 hover:bg-main-pink dark:hover:bg-gray-600 dark:hover:text-white">FAQ</a>
+                            </li>
+                        </ul>
+
+            </div>
+                </li>
+
+
+                <a href="#" class="text-sm py-4 px-8 bg-main-pink rounded-lg text-main-white font-semibold">Start a project</a>
+            </ul>
+        </div>
+        <!-- end main-menu-desktop -->
+        <div id="main-menu" class="lg:hidden flex flex-col lg:flex-row lg:items-center gap-8">
+            <!-- accordian -->
+            <div id="accordion-flush" data-accordion="collapse" data-active-classes="text-main-white" data-inactive-classes="text-main-white">
+    
+                <h2 id="accordion-flush-heading-2">
+                    <button type="button" class="flex items-center justify-between w-full font-medium text-left text-white" data-accordion-target="#accordion-flush-body-1" aria-expanded="false" aria-controls="accordion-flush-body-2">
+                    <span class="text-white">Websites</span>
+                    <svg data-accordion-icon class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                    </svg>
+                    </button>
+                </h2>
+                <div id="accordion-flush-body-1" class="hidden text-main-white pl-2 py-4" aria-labelledby="accordion-flush-heading-2">
+                    <div class="flex flex-col gap-4">
+                        <a href="#">How it works</a>
+                        <a href="#">What's included</a>
+                        <a href="#">Portfolio</a>
+                        <a href="#">Pricing</a>
+                    </div>
+                </div>
+
+            </div>
+            <div id="accordion-flush" data-accordion="collapse" data-active-classes="text-main-white" data-inactive-classes="text-main-white">
+    
+                <h2 id="accordion-flush-heading-2">
+                    <button type="button" class="flex items-center justify-between w-full font-medium text-left text-white" data-accordion-target="#accordion-flush-body-2" aria-expanded="false" aria-controls="accordion-flush-body-2">
+                    <span class="text-white">Company</span>
+                    <svg data-accordion-icon class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                    </svg>
+                    </button>
+                </h2>
+                <div id="accordion-flush-body-2" class="hidden text-main-white pl-2 py-4" aria-labelledby="accordion-flush-heading-2">
+                    <div class="flex flex-col gap-4">
+                        <a href="#">About us</a>
+                        <a href="#">FAQ</a>
+
+                    </div>
+                </div>
+
+            </div>
+            <!-- end accordian -->
+            <a href="#" class="text-sm py-4 px-8 bg-main-pink rounded-lg text-main-white font-semibold">Start a project</a>
+
+        </div>
+        <!-- end main-menu -->
+    </div>
+    <!-- end main-navigation -->
+</nav>
+
+
+
+
+
+
+
+
+    

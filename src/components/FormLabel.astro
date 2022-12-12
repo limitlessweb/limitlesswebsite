@@ -1,0 +1,10 @@
+---
+export interface props {
+    labelFor: string;
+    text: string;
+}
+
+const { labelFor, text } = Astro.props;
+---
+
+<label for={labelFor} class="block mb-0 text-lg text-main-white">{text}</label>

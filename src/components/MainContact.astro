@@ -1,0 +1,64 @@
+---
+import FormLabel from './FormLabel.astro';
+import FormSelect from './FormSelect.astro';
+import FormInput from './FormInput.astro';
+import FormTextarea from './FormTextarea.astro';
+import { Icon } from 'astro-icon';
+import { Image, Picture } from '@astrojs/image/components';
+import rockOn from '../images/rock-on.png'
+---
+
+<div class="grid grid-cols-1 lg:grid-cols-3 px-6 lg:px-28 text-main-white">
+        <form method="post" name="Dropdown Contact">
+            <div class="grid grid-cols-1 gap-4">
+
+                    <FormLabel labelFor="yourBusiness" text="I am a" />
+                    <FormSelect id="yourBusiness">
+                        <option selected>business</option>
+                        <option value="Free">freelancer</option>
+                        <option value="Rep">company representative</option>
+                        <option value="Person">curious person</option>
+                    </FormSelect>
+
+                    <FormLabel labelFor="yourNeeds" text="I need" />
+                    <FormSelect id="yourNeeds">
+                        <option selected>a new website</option>
+                        <option value="Existing">help with an existing website</option>
+                        <option value="Options">to discuss my options</option>
+                    </FormSelect>
+
+
+                    <FormLabel labelFor="yourWants" text="I want to" />
+                    <FormSelect id="yourWants">
+                        <option selected>schedule a call back</option>
+                        <option value="Info">request an information package</option>
+                        <option value="Meet">set up a meeting</option>
+                    </FormSelect>
+
+            </div>
+        </form>
+        <div class="place-self-end order-last lg:order-2">
+            <Picture src={rockOn} widths={[400, 800, 1200]} sizes="(max-width: 800px) 100vs, 800px" alt="" />
+        </div>
+        <div class="order-2 lg:order-last mt-4 lg:mt-0">
+        <form method="post" name="Input Contact">
+            <div class="grid grid-cols-1 gap-4">
+                <FormLabel labelFor="name" text="Name" />
+                <FormInput formType="text" formId="name" />
+
+                <FormLabel labelFor="email" text="Email" />
+                <FormInput formType="Text" formId="email" />
+
+                <FormLabel labelFor="phone" text="Phone Number" />
+                <FormInput formType="text" formId="phone" />
+
+                <FormLabel labelFor="message" text="Message" />
+                <FormTextarea formName="message" formId="message" formCols="30" formRows="2" />
+
+                <button type="submit" class="flex gap-3 text-sm py-4 px-8 bg-main-pink rounded-lg text-main-white font-semibold justify-center items-center uppercase w-36">Submit <Icon pack="ph" name="arrow-right" class="w-6" /></button>
+            </div> 
+        </form>
+        </div>
+</div>
+
+
